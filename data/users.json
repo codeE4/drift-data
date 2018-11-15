@@ -1,0 +1,17 @@
+{
+   "name": "users",
+   "documents": [
+	   {
+		   "_id": "123456789",
+		   "name": "Cody Ford",
+		   "email": "codya1f4@gmail.com"
+	   },
+	   {
+		   "_id": "987654321",
+		   "name": "Noah Ford",
+		   "email": "noahford2468@gmail.com"
+	   }
+   ]
+}
+
+

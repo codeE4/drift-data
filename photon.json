@@ -1,0 +1,16 @@
+{
+  "name": "drift-data",
+  "title": "drift",
+  "description": "drift",
+  "author": "duke",
+  "license": "MIT",
+  "version": "0.0.1.0.1",
+  "adminToken": "3c0f44197e10e2cb4a2e0fe749b88d03",
+  "ux": "Default",
+  "containers": {
+    "db": {
+      "name": "drift",
+      "url": "mongodb://mongo.lxd:27017/drift"
+    }
+  }
+}

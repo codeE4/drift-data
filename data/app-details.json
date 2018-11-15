@@ -1,0 +1,730 @@
+{
+  "name": "appDetails",
+  "documents": [
+    {
+      "_id": "5bb7b826eace5325fb017bef",
+      "type": "ux",
+      "name": "Default",
+      "cardBackground": "rgba(0, 0, 0, 0.4)",
+      "dateFormat": "YYYY-MM-DD",
+      "menuBackground": "rgba(0, 0, 0, 0.95)",
+      "pagination": {
+        "itemsPerPage": "1000"
+      },
+      "site": {
+        "background": "#fff",
+        "backgroundImage": ""
+      },
+      "colors": {
+        "primary": {
+          "background": "#D8D8D8",
+          "text": "#D8D8D8",
+          "highlight": "#ecc200",
+          "select": "#77A3B9 opacity 0.5",
+          "inverse": "#FFFFFF",
+          "danger": "#BE082F"
+        },
+        "secondary": {
+          "background": "#F7F5F5",
+          "text": "#BFBFBF",
+          "highlight": "#77A3B9",
+          "select": "#D8D8D8",
+          "inverse": "#FFFFFF",
+          "danger": "#BE082F"
+        }
+      }
+    },
+    {
+      "_id": "5bb7b826eace5325fb017bf0",
+      "type": "View",
+      "name": "AdministrationDashboard",
+      "title": "ADMINISTRATION",
+      "description": "ADMINISTRATION",
+      "background": "",
+      "templateTypes": [
+        "Dashboard"
+      ],
+      "viewModel": "classifications",
+      "viewModelType": "Administration Category",
+      "detailView": "",
+      "isDefault": "false",
+      "showSearch": "false",
+      "showAdd": "false",
+      "search": "",
+      "isMenu": "true",
+      "isNavigable": "true",
+      "isProtected": "true"
+    },
+    {
+      "_id": "5bb7b826eace5325fb017bf1",
+      "type": "View",
+      "name": "GatewayDashboard",
+      "title": "GATEWAYS",
+      "description": "GATEWAYS",
+      "background": "",
+      "templateTypes": [
+        "Dashboard"
+      ],
+      "viewModel": "gateways",
+      "viewModelType": "",
+      "detailView": "GatewayDetail",
+      "createView": "GatewayCreate",
+      "isDefault": "false",
+      "showSearch": "true",
+      "showPager": "true",
+      "page": 1,
+      "showAdd": "true",
+      "search": "",
+      "isMenu": "true",
+      "isNavigable": "true",
+      "isProtected": "true",
+      "cardOptions": {
+        "cardHeader": {
+          "componentType": "Label",
+          "value": "item.name"
+        }
+      }
+    },
+    {
+      "_id": "5bb7b826eace5325fb017bf2",
+      "type": "View",
+      "name": "GatewayDetail",
+      "title": "GATEWAY DETAIL",
+      "description": "GATEWAY DETAIL",
+      "background": "",
+      "templateTypes": [
+        "ItemDetail"
+      ],
+      "viewModel": "gateways",
+      "detailView": "GatewayDashboard",
+      "isDefault": "false",
+      "isMenu": "false",
+      "isNavigable": "true",
+      "isProtected": "true",
+      "selectLists": [
+        {
+          "id": "user",
+          "title": "User",
+          "model": "user"
+        }
+      ],
+      "viewItems": [
+        {
+          "name": "gatewayName",
+          "title": "Serial Number",
+          "column": "name",
+          "componentType": "TextField"
+        },
+        {
+          "name": "gatewayUser",
+          "title": "User",
+          "column": "user",
+          "componentType": "SelectList",
+          "selectDataModel": "user"
+        }
+      ]
+    },
+    {
+      "_id": "5bb7b826eace5325fb017bf3",
+      "type": "View",
+      "name": "GatewayCreate",
+      "title": "GATEWAY CREATE",
+      "description": "GATEWAY CREATE",
+      "background": "",
+      "templateTypes": [
+        "ItemCreate"
+      ],
+      "viewModel": "gateways",
+      "detailView": "GatewayDashboard",
+      "isDefault": "false",
+      "isMenu": "false",
+      "isNavigable": "true",
+      "isProtected": "true",
+      "saveActions": [
+        {
+          "name": "setPortAssignment"
+        }
+      ],
+      "selectLists": [
+        {
+          "id": "user",
+          "title": "User",
+          "model": "user"
+        }
+      ],
+      "viewItems": [
+        {
+          "name": "gatewayName",
+          "title": "Serial Number",
+          "column": "name",
+          "componentType": "TextField"
+        },
+        {
+          "name": "gatewayUser",
+          "title": "User",
+          "column": "user",
+          "componentType": "SelectList",
+          "selectDataModel": "user"
+        }
+      ]
+    },
+    {
+      "_id": "5bb7b826eace5325fb017bf4",
+      "type": "View",
+      "name": "UserDashboard",
+      "title": "MANAGE USERS",
+      "description": "MANAGE USERS",
+      "background": "",
+      "templateTypes": [
+        "Dashboard"
+      ],
+      "viewModel": "users",
+      "detailView": "UserDetail",
+      "createView": "UserCreate",
+      "isDefault": "false",
+      "showAdd": "true",
+      "showSearch": "true",
+      "search": "",
+      "showPager": "true",
+      "page": 1,
+      "isMenu": "true",
+      "isNavigable": "true",
+      "isProtected": "true",
+      "sort": {
+        "name": 1
+      },
+      "cardOptions": {
+        "cardHeader": {
+          "componentType": "Label",
+          "value": "item.fullName"
+        },
+        "cardContent": {
+          "componentType": "Label",
+          "value": "item.name"
+        }
+      }
+    },
+    {
+      "_id": "5bb7b826eace5325fb017bf5",
+      "type": "View",
+      "name": "UserDetail",
+      "title": "USER",
+      "description": "USER",
+      "background": "",
+      "templateTypes": [
+        "ItemDetail"
+      ],
+      "viewModel": "users",
+      "detailView": "UserDashboard",
+      "isDefault": "false",
+      "showSearch": "false",
+      "showAdd": "false",
+      "search": "",
+      "isMenu": "false",
+      "isNavigable": "true",
+      "isProtected": "true",
+      "selectLists": [
+        {
+          "id": "role",
+          "title": "Role",
+          "model": "role"
+        }
+      ],
+      "viewItems": [
+        {
+          "name": "userToken",
+          "title": "User Token",
+          "column": "token",
+          "componentType": "TextField"
+        },
+        {
+          "name": "userName",
+          "title": "User Email",
+          "column": "name",
+          "componentType": "TextField"
+        },
+        {
+          "name": "userFullName",
+          "title": "User Full Name",
+          "column": "fullName",
+          "componentType": "TextField"
+        },
+        {
+          "name": "userPassword",
+          "title": "User Password",
+          "column": "password",
+          "componentType": "TextField"
+        },
+        {
+          "name": "userRole",
+          "title": "User Role",
+          "column": "role",
+          "componentType": "SelectList",
+          "selectDataModel": "role"
+        }
+      ]
+    },
+    {
+      "_id": "5bb7b826eace5325fb017bf6",
+      "type": "View",
+      "name": "UserCreate",
+      "title": "NEW USER",
+      "description": "NEW USER",
+      "background": "",
+      "templateTypes": [
+        "ItemCreate"
+      ],
+      "viewModel": "users",
+      "detailView": "UserDashboard",
+      "isDefault": "false",
+      "showSearch": "false",
+      "showAdd": "false",
+      "search": "",
+      "isMenu": "false",
+      "isNavigable": "true",
+      "isProtected": "true",
+      "selectLists": [
+        {
+          "id": "role",
+          "title": "Role",
+          "model": "role"
+        }
+      ],
+      "createActions": [
+        {
+          "name": "getToken",
+          "field": "token"
+        }
+      ],
+      "viewItems": [
+        {
+          "name": "userToken",
+          "title": "User Token",
+          "column": "token",
+          "componentType": "TextField"
+        },
+        {
+          "name": "userName",
+          "title": "User Email",
+          "column": "name",
+          "componentType": "TextField"
+        },
+        {
+          "name": "userFullName",
+          "title": "User Full Name",
+          "column": "fullName",
+          "componentType": "TextField"
+        },
+        {
+          "name": "userPassword",
+          "title": "User Password",
+          "column": "password",
+          "componentType": "TextField"
+        },
+        {
+          "name": "userRole",
+          "title": "User Role",
+          "column": "role",
+          "componentType": "SelectList",
+          "selectDataModel": "role"
+        }
+      ]
+    },
+    {
+      "_id": "5bb7b826eace5325fb017bf7",
+      "type": "View",
+      "name": "PortAssignmentDashboard",
+      "title": "MANAGE PORT ASSIGNMENTS",
+      "description": "MANAGE PORT ASSIGNMENTS",
+      "background": "",
+      "templateTypes": [
+        "Dashboard"
+      ],
+      "viewModel": "portAssignments",
+      "detailView": "PortAssignmentDetail",
+      "createView": "PortAssignmentCreate",
+      "isDefault": "false",
+      "showSearch": "true",
+      "showAdd": "true",
+      "search": "",
+      "isMenu": "true",
+      "isNavigable": "true",
+      "isProtected": "true",
+      "showPager": "true",
+      "page": 1,
+      "sort": {
+        "ioPort": 1
+      },
+      "cardOptions": {
+        "cardHeader": {
+          "componentType": "Label",
+          "value": "`${item.ioPort} / ${item.httpPort}`"
+        }
+      }
+    },
+    {
+      "_id": "5bb7b826eace5325fb017bf8",
+      "type": "View",
+      "name": "PortAssignmentDetail",
+      "title": "PORT ASSIGNMENT",
+      "description": "PORT ASSIGNMENT",
+      "background": "",
+      "templateTypes": [
+        "ItemDetail"
+      ],
+      "viewModel": "portAssignments",
+      "detailView": "PortAssignmentDashboard",
+      "isDefault": "false",
+      "showSearch": "false",
+      "showAdd": "false",
+      "search": "",
+      "isMenu": "false",
+      "isNavigable": "true",
+      "isProtected": "true",
+      "selectLists": [],
+      "viewItems": [
+        {
+          "name": "portAssignmentIoPort",
+          "title": "PortAssignment IoPort",
+          "column": "ioPort",
+          "componentType": "TextField"
+        },
+        {
+          "name": "portAssignmentHttpPort",
+          "title": "PortAssignment HttpPort",
+          "column": "httpPort",
+          "componentType": "TextField"
+        },
+        {
+          "name": "portAssignmentUser",
+          "title": "User",
+          "column": "user",
+          "componentType": "TextField"
+        },
+        {
+          "name": "portAssignmentGateway",
+          "title": "Gateway",
+          "column": "gateway",
+          "componentType": "TextField"
+        }
+      ]
+    },
+    {
+      "_id": "5bb7b826eace5325fb017bf9",
+      "type": "View",
+      "name": "PortAssignmentCreate",
+      "title": "NEW PORT ASSIGNMENT",
+      "description": "NEW PORT ASSIGNMENT",
+      "background": "",
+      "templateTypes": [
+        "ItemCreate"
+      ],
+      "viewModel": "portAssignments",
+      "detailView": "PortAssignmentDashboard",
+      "isDefault": "false",
+      "showSearch": "false",
+      "showAdd": "false",
+      "search": "",
+      "isMenu": "false",
+      "isNavigable": "true",
+      "isProtected": "true",
+      "selectLists": [
+        {
+          "id": "user",
+          "title": "User",
+          "model": "user"
+        },
+        {
+          "id": "gateway",
+          "title": "Gateway",
+          "model": "gateway"
+        }
+      ],
+      "viewItems": [
+        {
+          "name": "portAssignmentIoPort",
+          "title": "PortAssignment IoPort",
+          "column": "ioPort",
+          "componentType": "TextField"
+        },
+        {
+          "name": "portAssignmentHttpPort",
+          "title": "PortAssignment HttpPort",
+          "column": "httpPort",
+          "componentType": "TextField"
+        },
+        {
+          "name": "portAssignmentUser",
+          "title": "User",
+          "column": "user",
+          "componentType": "SelectList",
+          "selectDataModel": "user"
+        },
+        {
+          "name": "portAssignmentGateway",
+          "title": "Gateway",
+          "column": "gateway",
+          "componentType": "SelectList",
+          "selectDataModel": "gateway"
+        }
+      ]
+    },
+    {
+      "_id": "5bb7b826eace5325fb017bfa",
+      "type": "View",
+      "name": "GatewaysView",
+      "title": "Gateways View",
+      "description": "Gateways View",
+      "background": "",
+      "templateTypes": [
+        "PageView"
+      ],
+      "viewModel": "users",
+      "detailView": "",
+      "isDefault": "false",
+      "showSearch": "false",
+      "showAdd": "false",
+      "search": "",
+      "isMenu": "false",
+      "isNavigable": "true",
+      "isProtected": "false",
+      "viewItems": [
+        {
+          "componentType": "NavHeader"
+        },
+        {
+          "componentType": "NavSidebar",
+          "header": {
+            "items": [
+              {
+                "name": "Dashboard",
+                "icon": "/images/homeIcon.svg",
+                "iconActive": "/images/homeIconActive.svg"
+              },
+              {
+                "name": "GatewaysView",
+                "icon": "/images/gatewayICON.svg",
+                "iconActive": "/images/gatewayIconActive.svg"
+              },
+              {
+                "name": "IssuesView",
+                "icon": "/images/gatewayAlertIcon.svg",
+                "iconActive": ""
+              },
+              {
+                "name": "ItemView",
+                "icon": "/images/workorderIcon@2x.png",
+                "iconActive": "/images/workorderIconActive.svg"
+              }
+            ]
+          }
+        },
+        {
+          "componentType": "FilterTable",
+          "header": {
+            "items": [
+              {
+                "name": "SearchIcon",
+                "icon": "/images/searchIcon@1x.png"
+              },
+              {
+                "name": "Gateway Status",
+                "field": "pageTitle"
+              }
+            ]
+          }
+        },
+        {
+          "componentType": "Table",
+          "header": {
+            "items": [
+              {
+                "name": "Serial Number",
+                "field": "gatewaySerialNumber"
+              },
+              {
+                "name": "Status",
+                "field": "status"
+              },
+              {
+                "name": "Devices",
+                "field": "devices"
+              },
+              {
+                "name": "Full Name",
+                "field": "name"
+              },
+              {
+                "name": "Email Address",
+                "field": "email"
+              },
+              {
+                "name": "Phone Number",
+                "field": "phoneNumber"
+              }
+            ]
+          },
+          "detailWindow": {
+            "items": [
+              {
+                "name": "CloseIcon",
+                "icon": "/images/closeIconCustomerInfo.png"
+              }
+            ]
+          }
+        },
+        {
+          "componentType": "DetailWindow"
+        }
+      ]
+    },
+    {
+      "_id": "5bb7b826eace5325fb017bfb",
+      "type": "View",
+      "name": "UsersView",
+      "title": "Users View",
+      "description": "Users View",
+      "background": "",
+      "templateTypes": [
+        "PageView"
+      ],
+      "viewModel": "users",
+      "detailView": "",
+      "isDefault": "true",
+      "showSearch": "false",
+      "showAdd": "false",
+      "search": "",
+      "isMenu": "false",
+      "isNavigable": "true",
+      "isProtected": "false",
+      "viewItems": [
+        {
+          "componentType": "NavHeader"
+        },
+        {
+          "componentType": "NavSidebar",
+          "header": {
+            "items": [
+              {
+                "name": "Dashboard",
+                "icon": "/images/homeIcon.svg",
+                "iconActive": "/images/homeIconActive.svg"
+              },
+              {
+                "name": "GatewaysView",
+                "icon": "/images/gatewayICON.svg",
+                "iconActive": "/images/gatewayIconActive.svg"
+              },
+              {
+                "name": "IssuesView",
+                "icon": "/images/gatewayAlertIcon.svg",
+                "iconActive": ""
+              },
+              {
+                "name": "ItemView",
+                "icon": "/images/workorderIcon@2x.png",
+                "iconActive": "/images/workorderIconActive.svg"
+              }
+            ]
+          }
+        },
+        {
+          "componentType": "Table",
+          "header": {
+            "items": [
+              {
+                "name": "Name",
+                "field": "name"
+              },
+              {
+                "name": "Email",
+                "field": "email"
+              },
+              {
+                "name": "Serial Number",
+                "field": "gatewaySerialNumber"
+              },
+              {
+                "name": "Passport ID",
+                "field": "passportId"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "5bb7b826eace5325fb017bfc",
+      "type": "View",
+      "name": "Dashboard",
+      "title": "Dashboard",
+      "description": "Dashboard",
+      "background": "",
+      "templateTypes": [
+        "PageView"
+      ],
+      "viewModel": "users",
+      "detailView": "GatewaysView",
+      "isDefault": "true",
+      "showSearch": "false",
+      "showAdd": "false",
+      "search": "",
+      "isMenu": "false",
+      "isNavigable": "true",
+      "isProtected": "false",
+      "viewItems": [
+        {
+          "componentType": "NavHeader"
+        },
+        {
+          "componentType": "NavSidebar",
+          "header": {
+            "items": [
+              {
+                "name": "Dashboard",
+                "icon": "/images/homeIcon.svg",
+                "iconActive": "/images/homeIconActive.svg"
+              },
+              {
+                "name": "GatewaysView",
+                "icon": "/images/gatewayICON.svg",
+                "iconActive": "/images/gatewayIconActive.svg"
+              },
+              {
+                "name": "IssuesView",
+                "icon": "/images/gatewayAlertIcon.svg",
+                "iconActive": ""
+              },
+              {
+                "name": "ItemView",
+                "icon": "/images/workorderIcon@2x.png",
+                "iconActive": "/images/workorderIconActive.svg"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_id": "5bb7b826eace5325fb017bfd",
+      "type": "View",
+      "name": "Login",
+      "title": "Login",
+      "description": "Login",
+      "background": "",
+      "templateTypes": [
+        "Login"
+      ],
+      "viewModel": "users",
+      "detailView": "Dashboard",
+      "isDefault": "false",
+      "showSearch": "false",
+      "showAdd": "false",
+      "search": "",
+      "isMenu": "false",
+      "isNavigable": "true",
+      "isProtected": "false",
+      "viewItems": []
+    }
+  ]
+}
